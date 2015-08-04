@@ -1,0 +1,16 @@
+# Header
+logo_text: # Add text logo instead of logo image
+menu:
+  首页: /
+  #Archives: archives
+  #Categories: categories
+  #Tags: tags
+  关于: /about
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
