@@ -65,6 +65,8 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: taobaofed2
 
+duoshuo_shortname: barretlee
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
