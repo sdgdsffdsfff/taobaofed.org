@@ -1,6 +1,6 @@
 # Taobao FED
 
-![taobao FED](./source/images/taobaofed.png)
+<img src="./source/images/taobaofed.png" width="200" />
 
 ## INFO
 
