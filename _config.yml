@@ -4,8 +4,8 @@
 
 # Site
 title: Taobao Fed Team
-subtitle:  
-description:
+subtitle: 淘宝网前端团队
+description: 用技术为体验提供无线可能
 author: Taobao Feder
 language: zh-cn
 timezone: Asia/Shanghai
@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://taobaofed.org
 root: /
-permalink: :year/:month/:day/:title/
+permalink: blog/:year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: taobaofed
+theme: taobaofed2
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
