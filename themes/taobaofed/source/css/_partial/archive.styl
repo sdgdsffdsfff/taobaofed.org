@@ -4,31 +4,39 @@
 .archives
   clearfix()
 
-.archive-year-wrap,
-.archive-category-wrap,
-.archive-tag-wrap
-  font-size: 1.4em
-  margin-bottom: 1em
-  a
-    @extend $link
+.archive-year-wrap
+  padding: 18px 30px 17px
+  font-size: font-size + 2
+  color: color-default + #111
+  border-bottom: 1px solid color-border-light
 
-// .archive-year
+.archive-year
+  @extend $block-caption
+  i
+    margin-right: 8px
 
 .archives
-  margin-left: 5px
-  border-left: 1px solid color-border
+  column-gap: 10px
+  @media mq-tablet
+    column-count: 2
+  @media mq-normal
+    column-count: 3
 
-// .archive-article
+.archive-article
+  avoid-column-break()
 
 .archive-article-inner
-  padding: 10px 10px 10px 12px
-  margin: 15px 0 15px -2px
-  border-left: 3px solid transparent
-  &:hover
-    border-left-color: black
+  padding: 10px
+  margin-bottom: 15px
 
 .archive-article-title
-  @extend $link
+  text-decoration: none
+  font-weight: bold
+  color: color-default
+  transition: color 0.2s
+  line-height: line-height
+  &:hover
+    color: color-link
 
 .archive-article-footer
   margin-top: 1em
@@ -43,32 +51,41 @@
 
 #page-nav
   clearfix()
-  margin: block-margin auto
+  float: left
+  width: 100%
+  display: block
+  margin: 30px 0px 45px 0px
   text-align: center
-  overflow: hidden
-  a, span
-    width: 36px
-    height: 36px
-    margin: 0 5px
-    line-height: 36px
-    text-align: center
-  a.prev,
-  a.next
-    margin: 0
-    width: auto
-  a
-    @extends $link
-  .prev
-    float: left
-  .next
-    float: right
-  .page-number
-    display: inline-block
-    @media mq-mobile
-      display: none
-  .current
-    color: #fff
-    border-radius: 18px
-    background-color: black
+  color: color-grey
+  .pages
+    display: block
+    font-size: 17px
+    font-weight: 300
+    margin-bottom: 1em!important
+    border: none!important
+    &:before
+      content: "\f15c"
+      font-family: FontAwesome
+      margin-right: 6px
+  .page-number,
+  .extend
+    color: color-link
+    position: relative
+    overflow: hidden
+    font-size: 16px
+    padding: 7px 8px
+    display: inline
+    margin: 0 2px
+    text-decoration: none
+    border-bottom: 3px solid color-border
+    border-top: 1px solid #f1f1f1
+    font-weight: 600
+    transition: 0.2s ease-in
+    &:hover,
+    &:active,
+    &.current
+      color: #444
+      border-bottom: 3px solid color-link
+      border-top: 1px solid #f1f1f1
   .space
     color: color-border

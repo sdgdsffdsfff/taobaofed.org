@@ -19,7 +19,7 @@
     title = 'Tag: ' + page.tag;
   }
   %>
-  <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (theme.rss){ %>
@@ -28,8 +28,20 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
-  <link href="<%- url_for(config.root + 'webfonts/ptserif/main.css') %>" rel='stylesheet' type='text/css'>
-  <link href="<%- url_for(config.root + 'webfonts/source-code-pro/main.css') %>" rel="stylesheet" type="text/css">
+
   <%- css('css/style') %>
-  <%- partial('google-analytics') %>
+  <% if (theme.fancybox){ %>
+    <%- css('fancybox/jquery.fancybox') %>
+  <% } %>
+  <% if (theme.scrollLoading){ %>
+    <%- css('scrollLoading/style') %>
+  <% } %>
+
+  <% if (theme.logo){ %>
+    <style type="text/css">
+      .logo { background-image:url(<%= theme.logo %>); }
+    </style>
+  <% } %>
+
+  <%- css('font-awesome/css/font-awesome.min') %>
 </head>

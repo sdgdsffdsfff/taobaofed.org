@@ -1,82 +1,52 @@
-<% switch (type) {
-    case 'archive':
-    var last;
-    page.posts.each(function(post, i){
-    var year = post.date.year();
-    if (last != year){
-      if (last != null){ %>
+<% if (!theme.groupByYear){
+  var postCount = 0;
+  page.posts.each(function(post){
+    postCount++;
+    if(postCount % 2 == 1) { %>
+      <div class="article-row">
+    <% } %>
+        <%- partial('article', {post: post, index: true}) %>
+    <% if(postCount == page.posts.length || postCount % 2 == 0) { %>
+      </div>
+    <% } %>
+  <% }) %>
+  <% if(page.total > 1) { %>
+    <nav id="page-nav">
+      <span class="pages"><%= _p('nav.current_page', page.current) %><%= _p('nav.total_page', page.total) %></span>
+      <%- paginator({prev_text: '&laquo;', next_text: '&raquo;'}) %>
+    </nav>
+  <% } %>
+<% } else { %>
+  <% var last, postCount = 0; %>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
         </div></section>
-      <% }
-      last = year; %>
+      <% } %>
+      <% last = year; postCount = 0;%>
       <section class="archives-wrap">
         <div class="archive-year-wrap">
-          <a href="<%- url_for('archives/' + year) %>" class="archive-year"><%= year %></a>
+          <a href="<%- url_for('archives/' + year) %>" class="archive-year"><i class="icon fa fa-calendar-o"></i><%= year %></a>
         </div>
         <div class="archives">
     <% } %>
-    <%- partial('archive-post', {post: post, archive: true}) %>
-  <% });
-    if (page.posts.length){ %>
+    <% postCount++; %>
+    <% if(postCount % 2 == 1) { %>
+      <div class="article-row">
+    <% } %>
+        <%- partial('article', {post: post, index: true}) %>
+    <% if(postCount == page.posts.length || postCount % 2 == 0) { %>
+      </div>
+    <% } %>
+  <% }) %>
+  <% if (page.posts.length){ %>
     </div></section>
-  <% }
-    if (page.total > 1){ %>
-      <nav id="page-nav">
-        <%- paginator({
-          prev_text: '&laquo; ' + __('nav.prev'),
-          next_text: __('nav.next') + ' &raquo;'
-        }) %>
-      </nav>
-    <% }
-    break;
-  case 'category': %>
-    <section class="archives-wrap">
-    <div class="archive-category-wrap">
-      <span class="archive-category"><%= page.category %></span>
-    </div>
-    <div class="archives">
-    <% page.posts.each(function (post, i) { %>
-      <%- partial('archive-post', {post: post, archive: false}) %>
-    <% }); %>
-    </div></section>
-    <% if (page.total > 1){ %>
-      <nav id="page-nav">
-        <%- paginator({
-          prev_text: '&laquo; ' + __('nav.prev'),
-          next_text: __('nav.next') + ' &raquo;'
-        }) %>
-      </nav>
-    <% }
-    break;
-  case 'tag': %>
-    <section class="archives-wrap">
-    <div class="archive-tag-wrap">
-      <span class="archive-tag">#<%= page.tag %></span>
-    </div>
-    <div class="archives">
-    <% page.posts.each(function (post, i) { %>
-      <%- partial('archive-post', {post: post, archive: false}) %>
-    <% }); %>
-    </div></section>
-    <% if (page.total > 1){ %>
-      <nav id="page-nav">
-        <%- paginator({
-          prev_text: '&laquo; ' + __('nav.prev'),
-          next_text: __('nav.next') + ' &raquo;'
-        }) %>
-      </nav>
-    <% }
-    break;
-  default:
-    page.posts.each(function(post){ %>
-      <%- partial('article', {post: post, index: true}) %>
-    <% })
-    if (page.total > 1){ %>
-      <nav id="page-nav">
-        <%- paginator({
-          prev_text: '&laquo; ' + __('nav.prev'),
-          next_text: __('nav.next') + ' &raquo;'
-        }) %>
-      </nav>
-    <% }
-    break;
-} %>
+  <% } %>
+  <% if(page.total > 1) { %>
+    <nav id="page-nav">
+      <span class="pages"><%= _p('nav.current_page', page.current) %><%= _p('nav.total_page', page.total) %></span>
+      <%- paginator({prev_text: '&laquo;', next_text: '&raquo;'}) %>
+    </nav>
+  <% } %>
+<% } %>

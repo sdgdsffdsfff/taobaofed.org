@@ -1,13 +1,8 @@
-$link
-  color: color-default
+$block-caption
   text-decoration: none
-  border-bottom: 1px dotted transparent
-  &:hover
-    border-bottom-color: black
-    
-$link-highlight
-  @extends $link
-  border-bottom: 1px dotted black
+  color: color-default + #111
+  line-height: 1em
+  text-shadow: 0 1px #fff
 
 $base-style
   h1
@@ -43,7 +38,6 @@ $base-style
   acronym, abbr
     border-bottom: 1px dotted
   ul, ol, dl
-    margin: 0 20px
     line-height: line-height
   ul, ol
     ul, ol
@@ -51,7 +45,10 @@ $base-style
       margin-bottom: 0
   ul
     list-style: disc
+    list-style-position: inside
   ol
     list-style: decimal
+    list-style-position: inside
   dt
     font-weight: bold
+    list-style-position: inside

@@ -1,16 +1,64 @@
+# Logo Url
+# Please enter an absolute path to your logo file
+# or remove the following line with replacing logo-header.png with your own logo
+logo: /images/taobaofed200x200.png
+
 # Header
-logo_text: # Add text logo instead of logo image
 menu:
-  首页: /
-  #Archives: archives
-  #Categories: categories
-  #Tags: tags
-  关于: /about
+  # Delete this row if you don't want categories in your header nav bar
+  Web开发:
+    前端资讯: /categories/前端资讯/
+    HTML5: /categories/HTML5/
+    CSS3: /categories/CSS3/
+    JavaScript: /categories/JavaScript/
+    NodeJS: /categories/NodeJS/
+    用户体验设计: /categories/用户体验设计/
+    Web前端优化: /categories/Web前端优化/
+  移动开发:
+    Android开发: /categories/Android开发/
+    IOS开发: /categories/IOS开发/
+    React: /categories/React/
+    移动Web开发: /categories/移动Web开发/
+  资源工具: /tools/
+  实验室: /labs/
+  关于: /about/
+  RSS: /atom.xml
+
+# Article list grouped by year
+groupByYear: true
 
 # Content
-excerpt_link: Read More
 fancybox: true
+
+# Thumbnail
+thumbnail: true
+
+# Scroll Loading
+scrollLoading: true
+
+# Sidebar
+sidebar: left # sidebar's position (left or right)
+social_links:
+  github: https://github.com/ppoffice/hexo-theme-hueman
+  weibo: http://weibo.com/taobaofed
+  rss: /atom.xml
+widgets:
+- recent_posts
+- category
+- archive
+- tag
+#- tagcloud
+- links
+
+# Links
+links:
+  Hexo: http://hexo.io
+
+# Don't Use Google APIs if you are in google-blocked areas
+use_google_apis: false
 
 # Miscellaneous
 google_analytics: UA-65944345-1
-favicon: /favicon.png
+favicon: /favicon.ico
+fb_admins:
+fb_app_id:

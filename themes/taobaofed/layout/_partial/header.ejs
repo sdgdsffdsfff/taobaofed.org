@@ -1,18 +1,53 @@
 <header id="header">
   <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon"></a>
-      <a id="logo" class="logo<%=(theme.logo_text?' logo-text':'')%>" href="<%- url_for('/') %>"><%=(theme.logo_text?theme.logo_text:'')%></a>
-      <nav id="main-nav">
-        <% for (var i in theme.menu){ %>
-          <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-        <% } %>
-      </nav>
-      <nav id="sub-nav">
-        <div id="search-form-wrap">
-          <%- search_form({button: '&#xF002;'}) %>
+    <div class="container">
+      <div class="container-inner">
+        <div id="header-title">
+          <h1 class="logo-wrap">
+            <a href="<%- url_for() %>" class="logo"></a>
+          </h1>
+          <% if (theme.subtitle){ %>
+            <h2 class="subtitle-wrap">
+              <p class="subtitle"><%= theme.subtitle %></p>
+              <p class="description"><%= theme.description %></p>
+            </h2>
+          <% } %>
         </div>
-      </nav>
+        <div id="header-inner" class="nav-container">
+          <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+          <div class="nav-container-inner">
+            <ul id="main-nav">
+              <li class="main-nav-list-item" ><a class="main-nav-list-link" href="<%- url_for('/') %>"><%= __('主页') %></a></li>
+              <% for (var i in theme.menu){
+                  if(i == 'Categories'){ %>
+                    <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}) %>
+                  <% } else { %>
+                <% if (typeof theme.menu[i] === 'string') { %>
+                <li class="main-nav-list-item" >
+                  <a class="main-nav-list-link" href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a>
+                </li>
+                <% } else if (typeof theme.menu[i] === 'object') { %>
+                <li class="main-nav-list-item top-level-menu" >
+                  <a class="main-nav-list-link" href="javascript: void(0);"><%= __(i) %></a>
+                  <ul class="main-nav-list-child">
+                    <li class="main-nav-list-item">
+                      <% for (var j in theme.menu[i]){ %>
+                      <a class="main-nav-list-link" href="<%- url_for(theme.menu[i][j]) %>"><%= __(j) %></a>
+                      <% } %>
+                    </li>
+                  </ul>
+                </li>
+                <% } %>
+              <% }} %>
+            </ul>
+            <nav id="sub-nav">
+              <div id="search-form-wrap">
+                <%- search_form({text: __('index.search')}) %>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
