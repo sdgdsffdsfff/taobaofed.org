@@ -31,7 +31,7 @@
       <% } %>
       <p class="article-byline">
         <% if(post.author) { %>
-        <span>作者: <a href="<%- url_for("/authors/" + post.author + "/") %>"><%- post.author %> </a>
+        <span>作者: <%- post.author %>
         <% } %></span>
         <span>发表于: <%- partial('post/date', {class_name: 'article-date', date_format: null}) %></span>
       </p>
@@ -54,7 +54,7 @@
       </div>
     </section>
   <% } %>
-  <% if (!index && post.comments && config.duoshuo_shortname){ %>
+  <% if (!index && post.comments && config.duoshuo_shortname && page.comments){ %>
   <section id="comments">
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>

@@ -1,28 +1,17 @@
 # Logo Url
 # Please enter an absolute path to your logo file
 # or remove the following line with replacing logo-header.png with your own logo
-logo: /images/taobaofed200x200.png
+logo: //img.alicdn.com/tps/TB1Nv_wKXXXXXbmXVXXXXXXXXXX-295-195.png
 
 # Header
 menu:
   # Delete this row if you don't want categories in your header nav bar
-  Web开发:
-    前端资讯: /categories/前端资讯/
-    HTML5: /categories/HTML5/
-    CSS3: /categories/CSS3/
-    JavaScript: /categories/JavaScript/
-    NodeJS: /categories/NodeJS/
-    用户体验设计: /categories/用户体验设计/
-    Web前端优化: /categories/Web前端优化/
-  移动开发:
-    Android开发: /categories/Android开发/
-    IOS开发: /categories/IOS开发/
-    React: /categories/React/
-    移动Web开发: /categories/移动Web开发/
-  资源工具: /tools/
-  实验室: /labs/
-  关于: /about/
-  RSS: /atom.xml
+  Web开发: /categories/Web开发/
+  Node.js: /categories/Node-js/
+  无线开发: /categories/无线开发/
+  工具&平台: /categories/工具&平台/
+  团队生活: /categories/团队生活/
+  关于我们: /about/
 
 # Article list grouped by year
 groupByYear: true
@@ -39,8 +28,6 @@ scrollLoading: true
 # Sidebar
 sidebar: left # sidebar's position (left or right)
 social_links:
-  github: https://github.com/ppoffice/hexo-theme-hueman
-  weibo: http://weibo.com/taobaofed
   rss: /atom.xml
 widgets:
 - recent_posts
@@ -52,7 +39,8 @@ widgets:
 
 # Links
 links:
-  Hexo: http://hexo.io
+  淘宝UED: http://ued.taobao.org/blog/
+  Node地下铁: http://www.nodejs.club/
 
 # Don't Use Google APIs if you are in google-blocked areas
 use_google_apis: false

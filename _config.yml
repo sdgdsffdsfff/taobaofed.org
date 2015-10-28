@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Taobao Fed Team
-subtitle: 淘宝网前端团队
-description: 用技术为体验提供无线可能
-author: Taobao Feder
+title: Taobao FED | 淘宝前端团队
+subtitle: 淘宝前端团队（FED）
+description: 用技术为体验提供无限可能
+author: Taobao FED
 language: zh-cn
 timezone: Asia/Shanghai
 
@@ -64,12 +64,11 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: taobaofed
-
-duoshuo_shortname: barretlee
+duoshuo_shortname: taobaofed
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:taobaofed/taobaofed.github.io.git
+  repository: https://github.com/taobaofed/taobaofed.github.io.git
   branch: master
