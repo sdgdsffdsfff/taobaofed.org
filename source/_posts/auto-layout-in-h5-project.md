@@ -12,7 +12,7 @@ author: 愈之
 published: true
 ---
 
-![Are u ok？---记一次H5项目的安卓适配](http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png)
+![Are u ok？---记一次H5项目的安卓适配](http://gtms02.alicdn.com/tps/i2/TB15IMmKXXXXXXzXpXX2AXZ8pXX-900-500.png)
 
 ### Are u ok ?
 

@@ -9,7 +9,7 @@ author: Taobao FED
 published: true
 ---
 
-![Node地下铁](https://img.alicdn.com/tps/TB10PrRKXXXXXXTXpXXXXXXXXXX-430-430.jpg)
+![Node地下铁](https://img.alicdn.com/tps/TB15.wgKXXXXXcBXpXXXXXXXXXX-900-500.png)
 
 没有一种语言是不朽的，Node.js 也是，但冷静的思辨无价。
 

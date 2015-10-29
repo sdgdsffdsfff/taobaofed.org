@@ -10,10 +10,11 @@ author: 溪夏
 published: true
 ---
 
-![try catch 对代码运行的性能影响](https://img.alicdn.com/tps/TB1Qmj5KXXXXXXeXFXXXXXXXXXX-645-645.jpg)
+![try catch 对代码运行的性能影响](http://gtms04.alicdn.com/tps/i4/TB14IUrKXXXXXblXXXXlzJZ8pXX-900-500.jpg)
 
-## 起因
-要捕获代码中的异常一般会采用 try catch，不过 try catch 的使用是否是对代码性能产生影响呢？答案是肯定有的，但是有多少不得而知。
+## 起因
+
+要捕获 JavaScript 代码中的异常一般会采用 try catch，不过 try catch 的使用是否是对代码性能产生影响呢？答案是肯定有的，但是有多少不得而知。
 
 淘宝前端线上脚本错误的捕获方法：
 
@@ -186,7 +187,7 @@ try{
 </body>
 </html>
 ```
-## 运行结果（暂时只关注了 Chrome ，其他浏览器的数据后面补充）
+## 运行结果（只选取了 Chrome 作为示例）
 |-|不使用 try-catch|try 中耗时，内联代码|try 中耗时，外联代码|catch 中耗时，内联代码|catch 中耗时，外联代码|
 |---|---|---|---|---|---|
 |Chrome44|98.2|1026.9|107.7|1028.5|105.9|
