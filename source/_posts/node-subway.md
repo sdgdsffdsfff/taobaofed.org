@@ -1,9 +1,10 @@
 ---
 title: Node地下铁
-category: 团队生活
+categories: 
+  - 团队生活
 tags:
   - Node.js
-date: 2015-10-27 17:50:07
+date: 2015-10-27 14:00:23
 author: Taobao FED
 published: true
 ---

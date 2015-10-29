@@ -1,14 +1,15 @@
 ---
 title: 致想用 Node.js 的你
-category: Node.js
+categories: 
+  - Node.js
 tags:
   - Node.js
-date: 2015-10-27 15:13:58
+date: 2015-10-27 15:20:12
 author: 张挺
 published: true
 ---
 
-![NodeJS](https://img.alicdn.com/tps/TB147_oKXXXXXawaXXXXXXXXXXX-640-480.jpg)
+![致想用 Node.js 的你](https://img.alicdn.com/tps/TB147_oKXXXXXawaXXXXXXXXXXX-640-480.jpg)
 
 Node.js，09 年这个集成了 Google V8 JavaScript 引擎和一个底层 I/O API 的项目，如今项目无数，大企业也纷纷尝试。
 

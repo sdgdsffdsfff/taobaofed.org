@@ -9,7 +9,7 @@ menu:
   Web开发: /categories/Web开发/
   Node.js: /categories/Node-js/
   无线开发: /categories/无线开发/
-  工具&平台: /categories/工具&平台/
+  工具&平台: /categories/工具-平台/
   团队生活: /categories/团队生活/
   关于我们: /about/
 
@@ -33,7 +33,7 @@ widgets:
 - recent_posts
 - category
 - archive
-- tag
+# - tag
 #- tagcloud
 - links
 
